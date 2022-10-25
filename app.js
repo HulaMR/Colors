@@ -2,6 +2,21 @@ const cols = document.querySelectorAll('.col');
 const reload = document.getElementById('reload');
 const copied = document.querySelector('.copied');
 
+// document.addEventListener('keydown', (event) => {
+//   event.preventDefault();
+//   if (event.code.toLowerCase() === 'space') {
+//     setRandomColors();
+//   }
+// });
+
+// function generateRandomColor() {
+//   const hexCodes = '0123456789ABCDEF';
+//   let color = '';
+//   for (let i = 0; i < 6; i++) {
+//     color += hexCodes[Math.floor(Math.random() * hexCodes.length)];
+//   }
+//   return '#' + color;
+// }
 document.addEventListener('click', (event) => {
   const type = event.target.dataset.type;
   if (type === 'lock') {
@@ -14,26 +29,9 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// document.addEventListener('keydown', (event) => {
-//   event.preventDefault();
-//   if (event.code.toLowerCase() === 'space') {
-//     setRandomColors();
-//   }
-// });
-
 reload.addEventListener('click', () => {
   setRandomColors();
 });
-
-// function generateRandomColor() {
-//   const hexCodes = '0123456789ABCDEF';
-//   let color = '';
-//   for (let i = 0; i < 6; i++) {
-//     color += hexCodes[Math.floor(Math.random() * hexCodes.length)];
-//   }
-//   return '#' + color;
-// }
-
 function copyToClickBoard(text) {
   copied.style.display = 'flex';
   setTimeout(() => (copied.style.display = 'none'), 500);
@@ -61,7 +59,6 @@ function setRandomColors(isInitial) {
 
     setTextColor(text, color);
     setTextColor(button, color);
-    setTextColor(reload, color);
   });
   updateClorsHash(colors);
 }
