@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col h2 {
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  transition: background 0.15s ease-in-out;
+}
+
+.col h2:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.col button {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: background 0.15s ease-in-out;
+}
+
+.col button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#reload {
+  display: none;
+}
+
+#reload {
+  display: block;
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: background 0.15s ease-in-out;
+}
+#reload:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.copied {
+  display: none;
+  width: 160px;
+  left: 10px;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #2f983f;
+  font-size: 0.7rem;
+  position: absolute;
+  background: #fff; /*rgba(0, 0, 0, 0.2);*/
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.copied i {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+}
