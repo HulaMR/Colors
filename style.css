@@ -51,6 +51,8 @@ body {
 }
 
 #reload {
+  cursor: pointer;
+
   display: block;
   right: 10px;
   top: 10px;
@@ -63,9 +65,12 @@ body {
   font-size: 1.5rem;
   transition: background 0.1s ease-in-out;
 }
+
 #reload:hover {
+  background: #b7f3c0;
+}
+#reload:active {
   background: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 
 .copied {
