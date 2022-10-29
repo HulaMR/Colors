@@ -2,6 +2,17 @@ const cols = document.querySelectorAll('.col');
 const reload = document.getElementById('reload');
 const copied = document.querySelector('.copied');
 
+reload.addEventListener('click', () => {
+  const rot = reload.querySelector('i');
+  rot.style.transition = 'transform 0.2s ease-out';
+  rot.style.transform = `rotate(180deg)`;
+  console.log(rot);
+  setTimeout(() => {
+    rot.style.transition = 'transform 0s';
+    rot.style.transform = `rotate(0deg)`;
+  }, 200);
+});
+
 // document.addEventListener('keydown', (event) => {
 //   event.preventDefault();
 //   if (event.code.toLowerCase() === 'space') {
