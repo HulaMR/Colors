@@ -34,6 +34,7 @@ reload.addEventListener('click', () => {
 });
 function copyToClickBoard(text) {
   copied.style.display = 'flex';
+  copied.style.color = text;
   setTimeout(() => (copied.style.display = 'none'), 500);
   return navigator.clipboard.writeText(text);
 }
